@@ -22,7 +22,7 @@ const vercelConfig = {
 };
 
 fs.writeFileSync(
-  'vercel.json',
+  './vercel.json',
   JSON.stringify(vercelConfig, null, 2),
   'utf-8'
 );
