@@ -23,8 +23,9 @@ const vercelConfig = {
 
 fs.writeFileSync(
   './vercel.json',
-  JSON.stringify(vercelConfig, null, 2),
-  'utf-8'
-);
+  JSON.stringify(vercelConfig, null, 2), (err) => {
+    if (err) throw err;
+    console.log('vercel.json written');
+  });
 
 console.log('vercel.json generated!');
