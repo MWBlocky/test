@@ -40,5 +40,9 @@ if (fs.existsSync(file)) {
   console.log('vercel.json has been updated successfully.');
 } else {
   fs.writeFileSync(vercelPath, JSON.stringify(vercelConfig, null, 2));
+  fs.writeFileSync(
+    path.join(process.cwd(), '/vercel/output', 'vercel.json'),
+    JSON.stringify(vercelConfig, null, 2),
+  );
   console.log('vercel.json has been created successfully.');
 }
