@@ -35,4 +35,4 @@ const vercelConfig = {
   },
 };
 fs.writeFileSync('vercel.json', JSON.stringify(vercelConfig, null, 2));
-console.log('vercel.json has been generated successfully.'
+console.log('vercel.json has been generated successfully.');
