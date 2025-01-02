@@ -5,10 +5,6 @@ const vercelConfig = {
   version: 2,
   builds: [
     {
-      src: 'generate.js',
-      use: '@vercel/node',
-    },
-    {
       src: 'src/main.ts',
       use: '@vercel/node',
     },
@@ -34,5 +30,15 @@ const vercelConfig = {
     CRON_SECRET: 'secrbuibet',
   },
 };
-fs.writeFileSync('vercel.json', JSON.stringify(vercelConfig, null, 2));
-console.log('vercel.json has been generated successfully.');
+
+let vercelPath = path.join(process.cwd(), 'vercel.json');
+let file = fs.readFileSync(vercelPath);
+
+if (fs.existsSync(file)) {
+  console.log('vercel.json already exists.');
+  fs.writeFileSync(vercelPath, JSON.stringify(vercelConfig, null, 2));
+  console.log('vercel.json has been updated successfully.');
+} else {
+  fs.writeFileSync(vercelPath, JSON.stringify(vercelConfig, null, 2));
+  console.log('vercel.json has been created successfully.');
+}
