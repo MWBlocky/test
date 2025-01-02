@@ -30,9 +30,8 @@ const vercelConfig = {
     CRON_SECRET: 'secrbuibet',
   },
 };
-console.log(process.cwd());
 fs.writeFileSync(
-  path.join(process.cwd(), 'vercel.json'),
+  path.join(__dirname, 'vercel.json'),
   JSON.stringify(vercelConfig, null, 2),
 );
 
