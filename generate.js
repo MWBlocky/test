@@ -34,9 +34,6 @@ const vercelConfig = {
     CRON_SECRET: 'secrbuibet',
   },
 };
-fs.writeFileSync(
-  path.join(__dirname, 'vercel.json'),
-  JSON.stringify(vercelConfig, null, 2),
-);
+fs.writeFileSync('./vercel.json', JSON.stringify(vercelConfig, null, 2));
 
 console.log('Plik vercel.json został wygenerowany.');
