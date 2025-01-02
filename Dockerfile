@@ -1,5 +1,5 @@
 # Wybieramy obraz bazowy
-FROM node:16
+FROM node:22
 
 # Ustawiamy katalog roboczy
 WORKDIR /app
