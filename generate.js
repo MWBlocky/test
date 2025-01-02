@@ -1,4 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const fs = require('fs');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path');
 
 const vercelConfig = {
@@ -20,16 +22,19 @@ const vercelConfig = {
       },
     },
   ],
+  crons: [
+    {
+      path: '/',
+      schedule: '20 11 * * 4',
+    },
+  ],
+  env: {
+    CRON_SECRET: 'secrbuibet',
+  },
 };
 fs.writeFileSync(
   path.join(process.cwd(), 'vercel.json'),
   JSON.stringify(vercelConfig, null, 2),
-  'utf8',
-  (err) => {
-    if (err) {
-      console.error('Błąd podczas zapisywania pliku vercel.json:', err);
-    } else {
-      console.log('Plik vercel.json został wygenerowany.');
-    }
-  },
 );
+
+console.log('Plik vercel.json został wygenerowany.');
