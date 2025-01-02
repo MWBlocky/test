@@ -24,6 +24,6 @@
     }
   ],
   "env": {
-    "CRON_SECRET": "secret"
+    "CRON_SECRET": "secretdi"
   }
 }
