@@ -7,6 +7,9 @@ const vercelConfig = {
     {
       src: 'src/main.ts',
       use: '@vercel/node',
+      config: {
+        outputDirectory: 'dist',
+      },
     },
   ],
   routes: [
