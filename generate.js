@@ -5,11 +5,12 @@ const vercelConfig = {
   version: 2,
   builds: [
     {
+      src: 'generate.js',
+      use: '@vercel/node',
+    },
+    {
       src: 'src/main.ts',
       use: '@vercel/node',
-      config: {
-        outputDirectory: 'dist',
-      },
     },
   ],
   routes: [
