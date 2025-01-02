@@ -9,6 +9,7 @@ export class AppController {
   getHello(@Req() request: Request): string {
     const authHeader = request.headers['authorization'];
     if (authHeader !== 'Bearer secret') {
+      console.log('invalid authorization header');
       throw new UnauthorizedException('Invalid authorization header');
     }
     return this.appService.getHello();
