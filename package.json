@@ -6,7 +6,8 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "build:production": "node generate.js && nest start"
+    "build": "node generate.js && nest build",
+    "start": "nest start"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
