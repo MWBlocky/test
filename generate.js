@@ -1,6 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const fs = require('fs');
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path');
 
 const vercelConfig = {
@@ -32,6 +30,7 @@ const vercelConfig = {
     CRON_SECRET: 'secrbuibet',
   },
 };
+console.log(process.cwd());
 fs.writeFileSync(
   path.join(process.cwd(), 'vercel.json'),
   JSON.stringify(vercelConfig, null, 2),
