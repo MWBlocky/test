@@ -27,7 +27,7 @@ const vercelConfig = {
   crons: [
     {
       path: '/',
-      schedule: '20 11 * * 4',
+      schedule: '22 11 * * 4',
     },
   ],
   env: {
