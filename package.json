@@ -6,8 +6,8 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "build":  "nest build",
-    "start:prod": "node dist/main"
+    "generate:vercel": "node generate.js",
+    "deploy": "npm run generate:vercel && vercel"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
