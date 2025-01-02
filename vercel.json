@@ -20,7 +20,10 @@
   "crons": [
     {
       "path": "/",
-      "schedule": "18 10 * * 4"
+      "schedule": "22 10 * * 4"
     }
-  ]
+  ],
+  "env": {
+    "CRON_SECRET": "secret"
+  }
 }
